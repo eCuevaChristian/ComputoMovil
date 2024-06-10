@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_margin">30dp</dimen>
+    <dimen name="text_input_margin_top">20dp</dimen>
+    <dimen name="button_margin_top">20dp</dimen>
+    <dimen name="button_padding">16dp</dimen>
+    <dimen name="textview_margin_top">30dp</dimen>
+    <dimen name="textview_text_size">22sp</dimen>
+</resources>

@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Colorceleste">#1580EC</color>
+    <color name="Colorfondo">#E6D475</color>
 </resources>
