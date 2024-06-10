@@ -16,12 +16,11 @@
         android:layout_gravity="center"
         android:src="@drawable/perfilandroid"
         android:contentDescription="@string/profile_image"
-        android:maxWidth="488dp"/>
+        android:layout_margin="@dimen/activity_margin"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxWidth="488dp"
         android:background="@color/white"
         android:layout_margin="@dimen/activity_margin">
 
@@ -30,8 +29,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/user_main"
+            android:maxWidth="487dp"
             android:inputType="text"
-            android:maxWidth="488dp"
             android:textColor="#5C5761" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -41,8 +40,7 @@
         app:passwordToggleEnabled="true"
         android:layout_margin="@dimen/activity_margin"
         android:background="@color/white"
-        android:textColor="@color/black"
-        android:maxWidth="488dp">
+        android:textColor="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TextV_pass"
@@ -50,7 +48,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:maxWidth="488dp"
+            android:maxWidth="480dp"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -64,7 +62,6 @@
         android:padding="@dimen/button_padding"
         android:text="@string/start_login"
         android:textAllCaps="false"
-        android:maxWidth="488dp"
         android:textColor="#000000" />
 
     <TextView
@@ -75,7 +72,6 @@
         android:layout_marginTop="@dimen/textview_margin_top"
         android:text="@string/register"
         android:textSize="@dimen/textview_text_size"
-        android:maxWidth="488dp"
         android:textColor="#000000" />
 
 </LinearLayout>

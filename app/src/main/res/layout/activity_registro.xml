@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -12,44 +11,72 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Registro de Usuario Nuevo"
+        android:text="@string/Regs"
         android:layout_gravity="center"
         android:textSize="25sp"
-    />
+        android:textColor="#000000" />
 
     <EditText
         android:id="@+id/EditT_nombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints="name"
+        android:background="@color/Colorfondo"
+        android:backgroundTint="#FFFFFF"
+        android:backgroundTintMode="screen"
+        android:breakStrategy="high_quality"
+        android:hint="@string/nam_regis"
         android:inputType="text"
-        />
+        android:textColorHint="@color/black"
+        android:textColorLink="@color/Colorceleste"
+        android:textCursorDrawable="@drawable/bg_boton"
+        android:textDirection="anyRtl"
+        android:textSize="20sp" />
+
     <EditText
         android:id="@+id/EditT_usuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Usuario"
+        android:layout_width="332dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints="username"
+        android:background="#FFFFFF"
+        android:hint="@string/user_regis"
         android:inputType="text"
-        />
+        android:textColorHint="@color/black" />
+
     <EditText
         android:id="@+id/EditT_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="text"
-        />
+        android:layout_width="332dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword"
+        android:hint="@string/contra_regis"
+        android:textColorHint="@color/black"
+    android:background="#FFFFFF"
+    android:autofillHints="password" />
+
     <EditText
         android:id="@+id/EditT_edad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Edad"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:inputType="number"
-        />
-    <Button
+        android:hint="@string/eda_regis"
+        android:textColorHint="@color/black"
+        android:background="#FFFFFF"
+        android:maxWidth="488dp"
+        android:autofillHints="birthDateDay" />
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Registrarse"
         android:layout_gravity="center"
-        />
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_boton"
+        android:text="@string/btnRegis"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:textColorLink="@color/Colorceleste" />
 </LinearLayout>
