@@ -26,11 +26,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TextV_usu"
-            android:layout_width="match_parent"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:hint="@string/user_main"
-            android:maxWidth="487dp"
             android:inputType="text"
+            android:maxWidth="487dp"
             android:textColor="#5C5761" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -44,12 +44,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TextV_pass"
-            android:layout_width="match_parent"
+            android:layout_width="338dp"
             android:layout_height="wrap_content"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:maxWidth="480dp"
-            />
+            android:maxWidth="480dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton

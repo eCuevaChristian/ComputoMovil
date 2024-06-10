@@ -11,4 +11,5 @@
     <string name="eda_regis">Edad</string>
     <string name="btnRegis">Registrarse</string>
     <string name="Regs"> Registro de Usuario Nuevo</string>
+    <string name="Cancel">Cancelar</string>
 </resources>
