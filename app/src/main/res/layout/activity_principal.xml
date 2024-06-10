@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Bienvenido a la Pantalla Principal"
+        android:text="@string/Bienvenido"
         android:textSize="25sp"
         />
 
@@ -25,7 +25,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nombre: "
+        android:text="@string/nam_regis"
         android:textSize="22sp"
         />
     <TextView
@@ -45,7 +45,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Usuario: "
+            android:text="@string/user_regis"
             android:textSize="22sp"
             />
         <TextView
@@ -65,7 +65,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Contraseña: "
+            android:text="@string/password"
             android:textSize="22sp"
             />
         <TextView
@@ -85,7 +85,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Edad: "
+            android:text="@string/eda_regis"
             android:textSize="22sp"
             />
         <TextView
@@ -96,5 +96,35 @@
             android:textSize="22sp"
             />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        style="?android:attr/buttonBarStyle">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sesion_cerrar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sesion_cerrar"
+            android:layout_margin="8dp"
+            android:textColor="@color/black"
+            android:background="@color/Colorceleste"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sgt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Next"
+            android:layout_margin="8dp"
+            android:background="@drawable/forma_btn"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
 
 </LinearLayout>

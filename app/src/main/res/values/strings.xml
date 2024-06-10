@@ -1,15 +1,20 @@
 <resources>
     <string name="app_name">Computo Movil</string>
-    <string name="user_main">Usuario</string>
-    <string name="password">Contraseña</string>
+    <string name="user_main">Usuario  :</string>
+    <string name="password">Contraseña  :</string>
     <string name="start_login">Iniciar logueo</string>
     <string name="register">Registrar</string>
     <string name="profile_image">Imagen de perfil de Android</string>
-    <string name="nam_regis">Nombre</string>
-    <string name="user_regis">Usuario</string>
-    <string name="contra_regis">Contraseña</string>
-    <string name="eda_regis">Edad</string>
+    <string name="nam_regis">Nombre  :</string>
+    <string name="user_regis">Usuario  :</string>
+    <string name="contra_regis">Contraseña  :</string>
+    <string name="eda_regis">Edad  :</string>
     <string name="btnRegis">Registrarse</string>
     <string name="Regs"> Registro de Usuario Nuevo</string>
     <string name="Cancel">Cancelar</string>
+    <string name="Next">Siguiente</string>
+    <string name="sesion_cerrar">Cerrar Sesion</string>
+    <string name="Bienvenido">Bienvenido a la Pantalla Principal</string>
+    <string name="ulti">Empecemos a jugar </string>
+
 </resources>
