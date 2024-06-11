@@ -13,60 +13,90 @@
         android:layout_height="wrap_content"
         android:text="@string/Regs"
         android:layout_gravity="center"
-        android:textSize="25sp"
-        android:textColor="#000000" />
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:background="@drawable/forma_btn"
+        android:padding="5dp"/>
 
     <EditText
         android:id="@+id/EditT_nombre"
-        android:layout_width="330dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:autofillHints="name"
         android:background="@color/Colorfondo"
-        android:backgroundTint="#FFFFFF"
-        android:backgroundTintMode="screen"
         android:breakStrategy="high_quality"
         android:hint="@string/nam_regis"
         android:inputType="text"
         android:textColorHint="@color/black"
-        android:textColorLink="@color/Colorceleste"
-        android:textCursorDrawable="@drawable/bg_boton"
         android:textDirection="anyRtl"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        tools:ignore="VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/EditT_usuario"
-        android:layout_width="332dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:autofillHints="username"
-        android:background="#FFFFFF"
-        android:hint="@string/user_regis"
+        android:background="@color/Colorfondo"
+        android:hint="@string/user_text"
         android:inputType="text"
-        android:textColorHint="@color/black" />
+        android:textColorHint="@color/black"
+        tools:ignore="VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/EditT_password"
-        android:layout_width="332dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
+        android:autofillHints="password"
+        android:background="@color/Colorfondo"
+        android:hint="@string/contra_text"
         android:inputType="textPassword"
-        android:hint="@string/contra_regis"
         android:textColorHint="@color/black"
-        android:background="#FFFFFF"
-        android:autofillHints="password" />
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <RadioGroup
+        android:id="@+id/comb_rabio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/Colorfondo"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:text="@string/Text_selec_sex"
+            android:layout_marginTop="10dp"
+            />
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Text_masc" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Text_fem" />
+    </RadioGroup>
 
     <EditText
         android:id="@+id/EditT_edad"
         android:layout_width="330dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
-        android:inputType="number"
-        android:hint="@string/eda_regis"
+        android:inputType="datetime"
+        android:hint="@string/age_text"
         android:textColorHint="@color/black"
         android:background="#FFFFFF"
         android:maxWidth="488dp"
         android:autofillHints="birthDateDay" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -93,7 +123,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/bg_boton"
-            android:text="@string/btnRegis"
+            android:text="@string/btn_Regis"
             android:textColor="@color/black"
             android:textAllCaps="false"
             android:layout_marginBottom="8dp"

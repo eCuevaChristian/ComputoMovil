@@ -1,17 +1,27 @@
 <resources>
+
     <string name="app_name">Computo Movil</string>
+    <string name="profile_image">Imagen de perfil de Android</string>
+    <string name="NombreApp">TIC-TAC-TOE</string>
     <string name="user_main">Usuario  :</string>
     <string name="password">Contraseña  :</string>
-    <string name="start_login">Iniciar logueo</string>
-    <string name="register">Registrar</string>
-    <string name="profile_image">Imagen de perfil de Android</string>
-    <string name="nam_regis">Nombre  :</string>
-    <string name="user_regis">Usuario  :</string>
-    <string name="contra_regis">Contraseña  :</string>
-    <string name="eda_regis">Edad  :</string>
-    <string name="btnRegis">Registrarse</string>
+    <string name="start_login">Iniciar Sesion</string>
+    <string name="text_for_register">¿No tienes una cuenta? Registrese aquí</string>
+
+
+
+    <string name="nam_regis"> Nombre</string>
+    <string name="user_text"> Usuario </string>
+    <string name="contra_text"> Contraseña </string>
+    <string name="Text_selec_sex">Selecciona el sexo:</string>
+    <string name="Text_masc">Masculino</string>
+    <string name="Text_fem">Femenino</string>
+    <string name="age_text"> dd/mm/aa</string>
+    <string name="btn_Regis">Registrarse</string>
     <string name="Regs"> Registro de Usuario Nuevo</string>
     <string name="Cancel">Cancelar</string>
+
+
     <string name="Next">Siguiente</string>
     <string name="sesion_cerrar">Cerrar Sesion</string>
     <string name="Bienvenido">Bienvenido a la Pantalla Principal</string>

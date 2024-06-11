@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.LinkedList;
+
 public class tictactoe extends AppCompatActivity {
 
     private ImageView img1 = null;
@@ -29,6 +31,10 @@ public class tictactoe extends AppCompatActivity {
     private String[][] board = new String[3][3];
     private Button resetButton = null;
     private Button exitButton = null;
+
+    // Listas para rastrear los movimientos de cada jugador
+    private LinkedList<int[]> xMoves = new LinkedList<>();
+    private LinkedList<int[]> oMoves = new LinkedList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,20 +88,65 @@ public class tictactoe extends AppCompatActivity {
 
     void clickImage(View view, int row, int col) {
         if (turno.equals("x")) {
-            view.setBackgroundResource(R.drawable.equis);
-            board[row][col] = "x";
+            handleMove(view, row, col, "x", xMoves);
             xturno.setBackgroundColor(Color.WHITE);
             oturno.setBackgroundColor(Color.RED);
             turno = "o";
         } else {
-            view.setBackgroundResource(R.drawable.circulo);
-            board[row][col] = "o";
+            handleMove(view, row, col, "o", oMoves);
             xturno.setBackgroundColor(Color.RED);
             oturno.setBackgroundColor(Color.WHITE);
             turno = "x";
         }
-        view.setEnabled(false);
         checkWinner();
+    }
+
+    void handleMove(View view, int row, int col, String player, LinkedList<int[]> moves) {
+        if (player.equals("x")) {
+            view.setBackgroundResource(R.drawable.equis);
+        } else {
+            view.setBackgroundResource(R.drawable.circulo);
+        }
+
+        board[row][col] = player;
+        moves.add(new int[]{row, col});
+        view.setEnabled(false);
+
+        if (moves.size() > 3) {
+            int[] firstMove = moves.poll();
+            int firstRow = firstMove[0];
+            int firstCol = firstMove[1];
+
+            board[firstRow][firstCol] = "";
+            ImageView firstImageView = getImageView(firstRow, firstCol);
+            firstImageView.setBackgroundResource(R.drawable.cuadrado);
+            firstImageView.setEnabled(true);
+        }
+    }
+
+    ImageView getImageView(int row, int col) {
+        switch (row * 3 + col) {
+            case 0:
+                return img1;
+            case 1:
+                return img2;
+            case 2:
+                return img3;
+            case 3:
+                return img4;
+            case 4:
+                return img5;
+            case 5:
+                return img6;
+            case 6:
+                return img7;
+            case 7:
+                return img8;
+            case 8:
+                return img9;
+            default:
+                return null;
+        }
     }
 
     void resetGame() {
@@ -129,6 +180,10 @@ public class tictactoe extends AppCompatActivity {
                 board[i][j] = "";
             }
         }
+
+        // Limpiar las listas de movimientos
+        xMoves.clear();
+        oMoves.clear();
     }
 
     void checkWinner() {
