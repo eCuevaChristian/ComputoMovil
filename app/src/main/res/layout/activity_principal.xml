@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="30dp"
-    tools:context=".PrincipalActivity">
+    tools:context=".PrincipalActivity"
+    >
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,72 +35,90 @@
         android:layout_gravity="center">
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/img1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                app:srcCompat="@drawable/cuadrado" />
+                app:srcCompat="@drawable/cuadrado"
+                android:contentDescription="@null"
+                />
 
             <ImageView
                 android:id="@+id/img2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                app:srcCompat="@drawable/cuadrado" />
+                app:srcCompat="@drawable/cuadrado"
+                android:contentDescription="@null"
+                />
 
             <ImageView
                 android:id="@+id/img3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                app:srcCompat="@drawable/cuadrado" />
+                app:srcCompat="@drawable/cuadrado"
+                android:contentDescription="@null"
+                tools:ignore="VisualLintBounds" />
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/img4"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                app:srcCompat="@drawable/cuadrado" />
+                app:srcCompat="@drawable/cuadrado"
+                android:contentDescription="@null"
+                />
 
             <ImageView
                 android:id="@+id/img5"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                app:srcCompat="@drawable/cuadrado" />
+                app:srcCompat="@drawable/cuadrado"
+                android:contentDescription="@null"
+                />
 
             <ImageView
                 android:id="@+id/img6"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                app:srcCompat="@drawable/cuadrado" />
+                app:srcCompat="@drawable/cuadrado"
+                android:contentDescription="@null"
+                tools:ignore="VisualLintBounds" />
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/img7"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                app:srcCompat="@drawable/cuadrado" />
+                app:srcCompat="@drawable/cuadrado"
+                android:contentDescription="@null"
+                tools:ignore="VisualLintBounds" />
 
             <ImageView
                 android:id="@+id/img8"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                app:srcCompat="@drawable/cuadrado" />
+                app:srcCompat="@drawable/cuadrado"
+                android:contentDescription="@null"
+                tools:ignore="VisualLintBounds" />
 
             <ImageView
                 android:id="@+id/img9"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                app:srcCompat="@drawable/cuadrado" />
+                app:srcCompat="@drawable/cuadrado"
+                android:contentDescription="@null"
+                tools:ignore="VisualLintBounds" />
         </TableRow>
 
     </TableLayout>
@@ -114,17 +133,21 @@
             android:id="@+id/xturno"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp"
             android:layout_marginTop="30dp"
-            app:srcCompat="@drawable/equis" />
+            app:srcCompat="@drawable/equis"
+            android:contentDescription="@null"
+            />
 
         <ImageView
             android:id="@+id/oturno"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp"
-            app:srcCompat="@drawable/circulo" />
+            android:layout_marginStart="30dp"
+            app:srcCompat="@drawable/circulo"
+            android:contentDescription="@null"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -133,7 +156,7 @@
         android:orientation="horizontal"
         android:gravity="center">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/sesion_cerrar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -141,17 +164,20 @@
             android:layout_marginEnd="@dimen/MARGIN_t1"
             android:text="@string/sesion_cerrar"
             android:textColor="@color/black"
-            android:background="@color/Colorceleste"/>
+            android:background="@color/Colorceleste"
+            tools:ignore="VisualLintButtonSize" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/reset_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginStart="@dimen/MARGIN_t1"
             android:layout_weight="1"
-            android:layout_gravity="center"
+            android:background="@drawable/forma_btn"
+            android:text="@string/Rein_jueg"
             android:textColor="@color/black"
-            android:text="@string/Rein_jueg" />
+            tools:ignore="VisualLintButtonSize" />
     </LinearLayout>
 
 
