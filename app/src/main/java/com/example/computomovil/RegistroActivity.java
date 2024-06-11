@@ -5,8 +5,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.EditText;
+import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -43,6 +46,22 @@ public class RegistroActivity extends AppCompatActivity {
             return insets;
         });
 
+        EditText usuarioEditText = findViewById(R.id.EditT_usuario);
+        usuarioEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (s.length() > 10) {
+                    usuarioEditText.setText(s.subSequence(0, 10));
+                    usuarioEditText.setSelection(10);
+                }
+            }
+        });
         registrarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,8 +85,10 @@ public class RegistroActivity extends AppCompatActivity {
         String usuario = usuarioEditText.getText().toString();
         String password = passwordEditText.getText().toString();
         String edad = edadEditText.getText().toString();
+        boolean sexoMasculino = ((RadioButton) findViewById(R.id.radioButton)).isChecked();
+        boolean sexoFemenino = ((RadioButton) findViewById(R.id.radioButton2)).isChecked();
 
-        if (nombre.isEmpty() || usuario.isEmpty() || password.isEmpty() || edad.isEmpty()) {
+        if (nombre.isEmpty() || usuario.isEmpty() || password.isEmpty() || edad.isEmpty() || (!sexoMasculino && !sexoFemenino)) {
             Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_LONG).show();
             return;
         }

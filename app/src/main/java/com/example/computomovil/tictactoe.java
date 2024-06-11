@@ -61,14 +61,13 @@ public class tictactoe extends AppCompatActivity {
         resetButton = findViewById(R.id.reset_button);
         exitButton = findViewById(R.id.exit_button);
 
-        // Inicializar el tablero
+
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 board[i][j] = "";
             }
         }
 
-        // Establecer el OnClickListener para cada ImageView
         img1.setOnClickListener(v -> clickImage(v, 0, 0));
         img2.setOnClickListener(v -> clickImage(v, 0, 1));
         img3.setOnClickListener(v -> clickImage(v, 0, 2));
@@ -79,10 +78,8 @@ public class tictactoe extends AppCompatActivity {
         img8.setOnClickListener(v -> clickImage(v, 2, 1));
         img9.setOnClickListener(v -> clickImage(v, 2, 2));
 
-        // Establecer el OnClickListener para el botón de reinicio
         resetButton.setOnClickListener(v -> resetGame());
 
-        // Establecer el OnClickListener para el botón de salir
         exitButton.setOnClickListener(v -> finish());
     }
 

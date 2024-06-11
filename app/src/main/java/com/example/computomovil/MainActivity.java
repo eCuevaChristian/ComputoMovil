@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +40,22 @@ public class MainActivity extends AppCompatActivity {
         usuarioEditText = findViewById(R.id.TextV_usu);
         passwordEditText = findViewById(R.id.TextV_pass);
         btn_ini = findViewById(R.id.btn_ini);
+
+        usuarioEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (s.length() > 10) {
+                    usuarioEditText.setText(s.subSequence(0, 10));
+                    usuarioEditText.setSelection(10);
+                }
+            }
+        });
 
         tv_registrar.setOnClickListener(new View.OnClickListener() {
             @Override
