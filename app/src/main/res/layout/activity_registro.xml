@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="30dp"
-    tools:context=".RegistroActivity">
+    tools:context=".RegistroActivity"
+    android:background="@color/Colorfondo">
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,6 +14,7 @@
         android:text="@string/Regs"
         android:layout_gravity="center"
         android:textSize="20sp"
+        android:layout_margin="30dp"
         android:textColor="#000000"
         android:background="@drawable/forma_btn"
         android:padding="5dp"/>
@@ -23,8 +24,10 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
         android:autofillHints="name"
-        android:background="@color/Colorfondo"
+        android:background="@color/white"
         android:breakStrategy="high_quality"
         android:hint="@string/nam_regis"
         android:inputType="text"
@@ -38,8 +41,10 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
         android:autofillHints="username"
-        android:background="@color/Colorfondo"
+        android:background="@color/white"
         android:hint="@string/user_text"
         android:inputType="text"
         android:textColorHint="@color/black"
@@ -51,8 +56,10 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
         android:autofillHints="password"
-        android:background="@color/Colorfondo"
+        android:background="@color/white"
         android:hint="@string/contra_text"
         android:inputType="textPassword"
         android:textColorHint="@color/black"
@@ -62,8 +69,10 @@
         android:id="@+id/comb_rabio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@color/Colorfondo"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:background="@color/white"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -88,21 +97,25 @@
 
     <EditText
         android:id="@+id/EditT_edad"
-        android:layout_width="330dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:inputType="datetime"
-        android:hint="@string/age_text"
-        android:textColorHint="@color/black"
+        android:layout_marginEnd="30dp"
+        android:autofillHints="birthDateDay"
         android:background="#FFFFFF"
+        android:hint="@string/age_text"
+        android:inputType="datetime"
         android:maxWidth="488dp"
-        android:autofillHints="birthDateDay" />
+        android:textColorHint="@color/black"
+        tools:ignore="VisualLintTextFieldSize" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_cancelar"
