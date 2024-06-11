@@ -18,7 +18,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class LOGIN extends AppCompatActivity {
 
     private EditText usuarioEditText;
     private EditText passwordEditText;
@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         tv_registrar.setOnClickListener(v -> {
-            Intent intentRegistrar = new Intent(MainActivity.this, RegistroActivity.class);
-            MainActivity.this.startActivity(intentRegistrar);
+            Intent intentRegistrar = new Intent(LOGIN.this, REGISTER.class);
+            LOGIN.this.startActivity(intentRegistrar);
         });
 
         btn_ini.setOnClickListener(v -> login());
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         String savedPassword = sharedPreferences.getString("password", null);
 
         if (usuario.equals(savedUsuario) && password.equals(savedPassword)) {
-            Intent intent = new Intent(MainActivity.this, PrincipalActivity.class);
+            Intent intent = new Intent(LOGIN.this, PLAY.class);
             intent.putExtra("nombre", sharedPreferences.getString("nombre", ""));
             intent.putExtra("usuario", savedUsuario);
             intent.putExtra("password", savedPassword);
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         } else {
-            Toast.makeText(MainActivity.this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LOGIN.this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
         }
     }
 }

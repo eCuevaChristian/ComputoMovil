@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/Colorfondo"
     android:orientation="vertical"
-    tools:context=".MainActivity"
+    tools:context=".LOGIN"
     tools:ignore="ExtraText">
 
     <ImageView

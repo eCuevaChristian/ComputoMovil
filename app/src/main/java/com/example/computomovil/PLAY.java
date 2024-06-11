@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.LinkedList;
 
-public class PrincipalActivity extends AppCompatActivity {
+public class PLAY extends AppCompatActivity {
 
     private ImageView img1 = null;
     private ImageView img2 = null;
@@ -101,7 +101,7 @@ public class PrincipalActivity extends AppCompatActivity {
     }
 
     private void cerrarSesion() {
-        Intent intent = new Intent(PrincipalActivity.this, MainActivity.class);
+        Intent intent = new Intent(PLAY.this, LOGIN.class);
         startActivity(intent);
         finish();
     }
@@ -209,7 +209,6 @@ void resetGame() {
 }
 
 void checkWinner() {
-    // Comprobar filas, columnas y diagonales
     for (int i = 0; i < 3; i++) {
         if (board[i][0].equals(board[i][1]) && board[i][0].equals(board[i][2]) && !board[i][0].isEmpty()) {
             declareWinner(board[i][0]);
@@ -229,7 +228,6 @@ void checkWinner() {
         return;
     }
 
-    // Comprobar si hay empate
     boolean emptySpace = false;
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {

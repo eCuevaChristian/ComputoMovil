@@ -18,7 +18,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class RegistroActivity extends AppCompatActivity {
+public class REGISTER extends AppCompatActivity {
 
     private EditText nombreEditText;
     private EditText usuarioEditText;
@@ -73,7 +73,7 @@ public class RegistroActivity extends AppCompatActivity {
         registrarButton.setOnClickListener(v -> saveUserData());
 
         cancelarButton.setOnClickListener(v -> {
-            Intent intent = new Intent(RegistroActivity.this, MainActivity.class);
+            Intent intent = new Intent(REGISTER.this, LOGIN.class);
             startActivity(intent);
             finish();
         });
@@ -102,7 +102,7 @@ public class RegistroActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Registro exitoso", Toast.LENGTH_LONG).show();
 
-        Intent intent = new Intent(RegistroActivity.this, MainActivity.class);
+        Intent intent = new Intent(REGISTER.this, LOGIN.class);
         startActivity(intent);
         finish();
     }
