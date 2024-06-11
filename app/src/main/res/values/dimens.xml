@@ -7,4 +7,5 @@
     <dimen name="textview_margin_top">30dp</dimen>
     <dimen name="text_tam_h1">22sp</dimen>
     <dimen name="text_tam_h2">18sp</dimen>
+    <dimen name="MARGIN_t1">8dp</dimen>
 </resources>

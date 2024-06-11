@@ -16,12 +16,12 @@
     <string name="Text_selec_sex">Selecciona el sexo:</string>
     <string name="Text_masc">Masculino</string>
     <string name="Text_fem">Femenino</string>
-    <string name="age_text"> dd/mm/aa</string>
+    <string name="age_text"> Edad</string>
     <string name="btn_Regis">Registrarse</string>
     <string name="Regs"> Registro de Usuario Nuevo</string>
     <string name="Cancel">Cancelar</string>
 
-
+    <string name="Rein_jueg">Reiniciar Juego</string>
     <string name="Next">Siguiente</string>
     <string name="sesion_cerrar">Cerrar Sesion</string>
     <string name="Bienvenido">Bienvenido a la Pantalla Principal</string>
