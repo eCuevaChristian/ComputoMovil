@@ -19,9 +19,6 @@ import java.util.LinkedList;
 
 public class PrincipalActivity extends AppCompatActivity {
 
-    private TextView nombreTextView;
-    private Button btnCerrarSesion;
-
     private ImageView img1 = null;
     private ImageView img2 = null;
     private ImageView img3 = null;
@@ -34,16 +31,24 @@ public class PrincipalActivity extends AppCompatActivity {
     private ImageView xturno = null;
     private ImageView oturno = null;
     private String turno = "x"; // Asumiendo que 'turno' se inicializa en "x"
-    private String[][] board = new String[3][3];
-    private Button resetButton = null;
-    private LinkedList<int[]> xMoves = new LinkedList<>();
-    private LinkedList<int[]> oMoves = new LinkedList<>();
+    private final String[][] board = new String[3][3];
+    private final LinkedList<int[]> xMoves = new LinkedList<>();
+    private final LinkedList<int[]> oMoves = new LinkedList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_principal);
+
+        getWindow().getDecorView().setSystemUiVisibility(
+                          View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -62,7 +67,7 @@ public class PrincipalActivity extends AppCompatActivity {
         img9 = findViewById(R.id.img9);
         xturno = findViewById(R.id.xturno);
         oturno = findViewById(R.id.oturno);
-        resetButton = findViewById(R.id.reset_button);
+        Button resetButton = findViewById(R.id.reset_button);
 
 
         for (int i = 0; i < 3; i++) {
@@ -83,22 +88,16 @@ public class PrincipalActivity extends AppCompatActivity {
 
         resetButton.setOnClickListener(v -> resetGame());
 
-        nombreTextView = findViewById(R.id.TextV_nombre);
+        TextView nombreTextView = findViewById(R.id.TextV_nombre);
 
-        btnCerrarSesion = findViewById(R.id.sesion_cerrar);
+        Button btnCerrarSesion = findViewById(R.id.sesion_cerrar);
 
 
         Intent intent = getIntent();
         nombreTextView.setText(intent.getStringExtra("nombre"));
 
 
-        btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                cerrarSesion();
-            }
-        });
-        ;
+        btnCerrarSesion.setOnClickListener(v -> cerrarSesion());
     }
 
     private void cerrarSesion() {
@@ -136,6 +135,7 @@ void handleMove(View view, int row, int col, String player, LinkedList<int[]> mo
 
     if (moves.size() > 3) {
         int[] firstMove = moves.poll();
+        assert firstMove != null;
         int firstRow = firstMove[0];
         int firstCol = firstMove[1];
 
